@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Configuración básica de la página */
+    *{ 
+        box-sizing: border-box; 
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+
+    body { 
+        margin: 0; 
+        background: #f4f4f4; 
+    }
+    /* ===== PORTADA (solo primera vista) ===== */
+
+    /* Carrusel a pantalla completa */
+    .carousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item img {
+    height: 100vh;
+    }
+
+
+    /* ===== TEXTO CENTRADO ===== */
+    .titulo-centro {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .titulo-contenido h1 {
+    font-size: 5.5rem;
+    color: rgb(255, 255, 255);
+    text-shadow:
+    0 2px 8px rgba(255, 177, 177, 0.8),
+    0 0 30px rgba(233, 161, 161, 0.6);
+
+
+    }
+/* ===== CONTENIDO NORMAL ===== */
+.container {
+  background: rgb(196, 143, 143);
+  padding-top: 3rem;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  padding: 4rem 0;
+  max-width: 100% !important;
+
+}
+
+/* ===== BLOQUES ===== */
+.bloque {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 16px;
+  min-height: 400px;
+}
+
+/* Colores sutiles */
+.bloque1 { background: #f0f0f0; }
+.bloque2 { background: #ffffff; }
+.bloque3 { background: #f0f0f0; }
+
+/* ===== BLOQUE 2 - CARDS ===== */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background: #111;
+  color: white;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+
+}
+
+/* Imagen falsa */
+.card .foto {
+  height: 140px;
+  background: linear-gradient(135deg, #444, #111);
+
+  margin-bottom: 1rem;
+}
+.card .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* rellena sin deformar */
+  display: block;
+   
+}
+
+/* Hover */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ===== TEXTO ===== */
+.contenido {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}

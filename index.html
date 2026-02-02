@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Praga</title>
+
+    <!--Icono De Pagina-->
+    <link rel="shortcut icon" href="./img/portada/logo.jpg" />
+    <!--Enlace al css-->
     <link rel="stylesheet" href="./css/style.css">
 
     <!-- Enlace Bootstrap-->
@@ -11,101 +15,183 @@
 </head>
 <body>
     <header>
+        <!--ELEMENTO BOOTSTRAP - CARRUSEL-->
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                
+            <!-- 1 Elemento De Imagen - Donde empieza -->
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="./img/portada/imagen1.jpg" alt="First slide">
+                    <img class="d-block w-100" src="./img/portada/imagen2_carrusel.jpg" alt="First slide">
+                </div>
+                
+            <!-- 2 Elemento De Imagen -->
+                <div class="carousel-item ">
+                    <img class="d-block w-100" src="./img/portada/imagen1.jpg" alt="Second slide">
                 </div>
 
+            <!-- 3 Elemento De Imagen -->
+                <div class="carousel-item ">
+                    <img class="d-block w-100" src="./img/portada/imagen_carrusel.jpg" alt="Third slide">
+                </div>
+
+            <!-- 4 Elemento De Imagen -->
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/portada/imagen2_carrusel.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="./img/portada/imagen3_carrusel.png" alt="Fourth slide">
                 </div>
 
+            <!-- 5 Elemento De Imagen -->
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/portada/imagen3_carrusel.png" alt="Third slide">
+                    <img class="d-block w-100" src="./img/portada/imagen4_carrusel.jpg" alt="Fifth slide">
                 </div>
-
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="./img/portada/imagen4_carrusel.jpg" alt="Fourth slide">
-                </div>
-
             </div>
         </div>
     </header>
-        <!-- Título en el medio de la página -->
+
+    <!-- Título en el medio de la página -->
     <div class="titulo-centro">
         <div class="titulo-contenido">
             <h1>Praga</h1>
         </div>
     </div>
+    <a href="https://www.prague.eu/es" 
+   target="_blank" 
+   class="info-flotante">
+    <span class="icono">ℹ️</span>
+    <span class="texto">Info turística</span>
+</a>
 
+
+    <!--PRIMERA COLUMNA-->
     <div class="container">
-        <div class="bloque bloque1">
-            <div class="contenido">
-                Texto largo texto largo texto largo texto largo texto largo texto largo
-            </div>
-        </div>
+        <nav class="bloque bloque1">
+            <h3>Lugares de Praga</h3>
+            <ul class="menu enlaces">
+                <li><a href="#lugar1">Castillo de Praga</a></li>
+                <li><a href="#lugar2">Reloj astronómico</a></li>
+                <li><a href="#lugar3">Puente de Carlos</a></li>
+                <li><a href="#lugar4">Catedral de San Vito</a></li>
+                <li><a href="#lugar5">Plaza de Wenceslao</a></li>
+                <li><a href="#lugar6">Cementerio judío</a></li>
+            </ul>
+        </nav>
 
+    
+        <!-- SEGUNDA COLUMNA-->
         <div class="bloque bloque2">
             <div class="contenido">
                 <div class="card-container">
-
-                <div class="card">
-                    <div class="foto">
-                        <img src="./img/portada/castillo_cap1.jpg">
+                    <div id="lugar1" class="card">
+                        <div class="foto">
+                            <img src="./img/portada/castillo_cap1.jpg">
+                        </div>
+                        <h5 class="titulo_lugar">Castillo de Praga</h5>
+                        <p class="contenido_lugar">Es el monumento más visitado de Praga. Despuntando sobre la margen izquierda del Moldava, sus prietas hileras de agujas y palacios dominan el centro urbano cual fortaleza de cuento. Intramuros aguarda un fascinante conjunto de edificios históricos, museos y galerías que custodian algunos de los mayores tesoros artísticos y culturales de la República Checa.</p>
+                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.7429149675254!2d14.39904157690086!3d50.091100013172394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b951e6c24b7c3%3A0x2acf3c88af12259f!2sCastillo%20de%20Praga!5e0!3m2!1ses!2ses!4v1769972067832!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
-                    <h5>Castillo de Praga</h5>
-                    <p>Descripción corta.</p>
-                </div>
 
-                <div class="card">
-                    <div class="foto">
-                        <img src="./img/portada/catedral_cap2.jpg">
+                    <div id="lugar4" class="card">
+                        <div class="foto">
+                            <img src="./img/portada/catedral_cap2.jpg">
+                        </div>
+                        <h5 class="titulo_lugar" >Catedral de San Vito</h5>
+                        <p class="contenido_lugar">Construida a lo largo de más de 600 años, San Vito es una de las catedrales más opulentas de Europa central y un puntal de la vida religiosa y cultural checa. Entre sus tesoros se cuentan desde joyas de la Corona bohemia del s. xiv y radiantes vitrales art nouveau hasta las tumbas de los santos y soberanos bohemios, desde san Wenceslao hasta Carlos IV.</p>
+                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5529.808031689854!2d14.406833740801984!3d50.08713458716871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b951e38024f5b%3A0x69ad3850f2d989a2!2sCatedral%20de%20Praga!5e0!3m2!1ses!2ses!4v1769972798636!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
-                    <h5>Catedral de San Vito</h5>
-                    <p>Descripción corta.</p>
-                </div>
 
-                <div class="card">
-                    <div class="foto">
-                        <img src="./img/portada/reloj_asstronomico_cap3.jpg">
+                    <div id="lugar2" class="card">
+                        <div class="foto">
+                            <img src="./img/portada/reloj_asstronomico_cap3.jpg">
+                        </div>
+                        <h5 class="titulo_lugar" >Reloj astronómico</h5>
+                        <p class="contenido_lugar">El Ayuntamiento de la Ciudad Vieja, fundado en 1338, es un revoltillo de edificios medievales presididos por una excelsa torre gótica con un espléndido Reloj Astronómico. </p>
+                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.9605797971094!2d14.41813157690067!3d50.08702491346424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e939c02f49%3A0xf17b44b25aa20696!2sReloj%20Astron%C3%B3mico%20de%20Praga!5e0!3m2!1ses!2ses!4v1769972945537!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+
                     </div>
-                    <h5>Plaza de la Ciudad Vieja y reloj astronómico</h5>
-                    <p>Descripción corta.</p>
-                </div>
 
-                <div class="card">
-                    <div class="foto">
-                        <img src="./img/portada/plaza_cap6.jpg">
+                    <div id="lugar5" class="card">
+                        <div class="foto">
+                            <img src="./img/portada/plaza_cap6.jpg">
+                        </div>
+                        <h5 class="titulo_lugar" >Plaza de Wenceslao</h5>
+                        <p class="contenido_lugar" >Plasmada en postales que destacan la estatua ecuestre del “buen rey Wenceslao”, la plaza fue punto de encuentro de orgullosos checos y manifestantes de la Revolución de Terciopelo.</p>
+                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.2384867681917!2d14.424218376900367!3d50.081821613836816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ed30d58c83%3A0x31bac9b91ab53afb!2zVsOhY2xhdnNrw6kgbsOhbS4sIDExMCAwMCBQcmFoYSAxLCBDaGVxdWlh!5e0!3m2!1ses!2ses!4v1769973040076!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
-                    <h5>Plaza de Wenceslao</h5>
-                    <p>Descripción corta.</p>
-                </div>
 
-                <div class="card">
-                    <div class="foto">
-                        <img src="./img/portada/puente_cap4.jpg">
+                    <div id="lugar3" class="card">
+                        <div class="foto">
+                            <img src="./img/portada/puente_cap4.jpg">
+                        </div>
+                        <h5 class="titulo_lugar">Puente de Carlos</h5>
+                        <p class="contenido_lugar" >Este impresionante puente de piedra, encargado por el emperador Carlos IV en 1357 y flanqueado de estatuas de santos, constituye una forma inolvidable de cruzar desde la Ciudad Vieja a Malá Strana.</p>
+                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1330.2493346514407!2d14.411343576851989!3d50.086379880964536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e5e58eb59f%3A0x75209738d1d3b126!2sPuente%20Carlos!5e0!3m2!1ses!2ses!4v1769973129447!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
-                    <h5>Puente de Carlos</h5>
-                    <p>Descripción corta.</p>
-                </div>
 
-                <div class="card">
-                    <div class="foto">
-                        <img src="./img/portada/cementerio_cap5.jpg">
+                    <div id="lugar6" class="card">
+                        <div class="foto">
+                            <img src="./img/portada/cementerio_cap5.jpg">
+                        </div>
+                        <h5 class="titulo_lugar" >Cementerio judío</h5>
+                        <p class="contenido_lugar">Es el camposanto judío más antiguo que queda en Europa. Se creó a principios del s. xv pero aún conserva un halo de duelo a pesar de cerrarse hace más de dos siglos, es uno de los puntos de interés más visitados y difícilmente se hallará un momento tranquilo para la contemplación.</p>
+                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d806.2950454321538!2d14.417459342183006!3d50.08952524161002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ec00000001%3A0x87ac82039f145fd5!2sAntiguo%20Cementerio%20Jud%C3%ADo!5e0!3m2!1ses!2ses!4v1769973328607!5m2!1ses!2ses"  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
-                    <h5>Cementerio judío</h5>
-                    <p>Descripción corta.</p>
-                </div>
-
                 </div>
             </div>
         </div>
 
         <div class="bloque bloque3">
             <div class="contenido">
-                Texto medio texto medio
+                <div class="card-container1">
+                    <!-- Noticia 1 -->
+                    <div class="card1">
+                        <div class="foto">
+                            <img src="./img/noticias/noticia_primera.jpg" alt="Manifestación en Praga">
+                        </div>
+                        <h5 class="titulo_lugar" >Manifestación ciudadana en Praga</h5>
+                        <a href="https://apnews.com/article/28ffbe24ceb5f5f9e9d6087aa9381d3c" target="_blank">
+                            <p class="resumen">Decenas de miles de checos se manifestaron el domingo en la capital y en otros lugares para apoyar al presidente Petr Pavel en su disputa con el ministro de Asuntos Exteriores del país
+                            Los manifestantes llenaron la pintoresca Plaza del Núcleo Viejo y algunos otros tuvieron que reunirse en la cercana Plaza Wenceslao, donde vieron los discursos en pantallas gigantes.</p>
+                        </a>
+                    </div>
+
+                    <div class="card1">
+                        <div class="foto">
+                            <img src="./img/noticias/noticia_dos.jpg" alt="Centro histórico de Praga">
+                        </div>
+                        <h5 class="titulo_lugar" >Se investiga si el autor del tiroteo de Praga cometió otros crímenes</h5>
+                        <a href="https://www.antena3.com/noticias/mundo/investiga-autor-tiroteo-praga-cometio-otros-crimenes_20231222658553c929f3180001333ad6.html" target="_blank">
+                            <p class="resumen"> La conmoción es enorme en Praga un día después de que un joven de 24 años provocara la muerte de 14 personas y dejara heridas a otras 25 en la Universidad. Antes de provocar la masacre en el centro educativo, habría matado a su propio padre.</p>
+                        </a>
+                    </div>
+
+                    <div class="card1">
+                        <div class="foto">
+                            <img src="./img/noticias/noticias_tres.jpg" alt="Metro de Praga">
+                        </div>
+                        <h5 class="titulo_lugar" >Un avión realizó un aterrizaje de emergencia por el nacimiento de un bebé a bordo</h5>
+                        <a href="https://www.clarin.com/viste/avion-realizo-aterrizaje-emergencia-nacimiento-bebe-bordo_0_HcMt6aerAJ.html" target="_blank">
+                            <p class="resumen">Un avión de pasajeros que volaba de Birmingham a Bucarest aterrizó en el Aeropuerto Vaclav Havel de Praga debido al nacimiento de un bebé a bordo.</p>
+                        </a>
+                    </div>
+
+                    <div class="card1">
+                        <div class="foto">
+                            <img src="./img/noticias/noticia_cuarto.jpg" alt="Vivienda en Praga">
+                        </div>
+                        <h5 class="titulo_lugar" >Una funambulista sorprende a 35 metros de altura y sin red en Francia</h5>
+                        <a href="https://www.telecinco.es/noticias/cultura/funambulista-tatiana-mosio-paris-reto-cuerda-floja-red_18_2598780046.html" target="_blank">
+                            <p class="resumen">A 35 metros de altura y sin red, así sorprendió la equilibrista francesa Tatiana-Mosio a cientos de personas en París. Un paseo por la cuerda floja en el distrito de Montmartre, en el norte de la capital de Francia. Acompañada por una orquesta de cámara y sin ningún equipo de seguridad. Se preparó para el evento durante un año y practica el funambulismo desde los ocho años.</p>
+                        </a>
+                    </div>
+
+                    <div class="card1">
+                        <div class="foto">
+                            <img src="./img/noticias/noticia_quinta.jpg" alt="Río Moldava">
+                        </div>
+                        <h5 class="titulo_lugar" >Al menos cuatro muertos en un incendio en un hotel de una cadena española en Praga</h5>
+                        <a href="https://www.antena3.com/noticias/mundo/menos-dos-muertos-incendio-hotel-cadena-espanola-praga_201801215a6468d20cf29cc180729dac.html" target="_blank">
+                            <p class="resumen">El incendió en el hotel, un palacio de estilo neorrenacentista con 76 habitaciones, comenzó por razones que aún se desconocen. Unas 40 personas, en su gran mayoría extranjeros, han sido evacuadas.</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

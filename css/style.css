@@ -1,63 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* Configuración básica de la página */
-    *{ 
-        box-sizing: border-box; 
-        font-family: "Open Sans", sans-serif;
-        margin: 0;
-        padding: 0;
-        scroll-behavior: smooth;
-    }
+*{ 
+    box-sizing: border-box; 
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
 
-    body { 
-        margin: 0; 
-        background: #f4f4f4; 
-    }
-    /* ===== PORTADA (solo primera vista) ===== */
+body { 
+    margin: 0; 
+    background: #f4f4f4; 
+}
+/* ===== PORTADA (solo primera vista) ===== */
 
-    /* Carrusel a pantalla completa */
-    .carousel,
-    .carousel-inner,
-    .carousel-item,
-    .carousel-item img {
-    height: 100vh;
-    }
-
-
-    /* ===== TEXTO CENTRADO ===== */
-    .titulo-centro {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-
-    .titulo-contenido h1 {
-    font-size: 5.5rem;
-    color: rgb(255, 255, 255);
-    text-shadow:
-    0 2px 8px rgba(255, 177, 177, 0.8),
-    0 0 30px rgba(233, 161, 161, 0.6);
+/* Carrusel a pantalla completa */
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+height: 100vh;
+}
 
 
-    }
+/* ===== TEXTO CENTRADO ===== */
+.titulo-centro {
+position: absolute;
+inset: 0;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.titulo-contenido h1 {
+font-size: 5.5rem;
+color: rgb(255, 255, 255);
+text-shadow:
+0 2px 8px rgba(255, 160, 70, 0.8),
+0 0 30px rgba(255, 164, 44, 0.6);
+}
+
 /* ===== CONTENIDO NORMAL ===== */
 .container {
-  background: rgb(196, 143, 143);
+  background-image: url(../img/portada/fondo_pagina.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
   padding-top: 3rem;
 }
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .container {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
   gap: 2rem;
   padding: 4rem 0;
   max-width: 100% !important;
-
+  display: flex; /* CAMBIAR ESTO*/
+  justify-content: space-between;
+  padding: 30px;
+  border: 1px dotted #ccc;
 }
+
+.info-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 8px;
+
+    background: linear-gradient(135deg, #b9935a, #e6c47a);
+    color: #1a1a1a;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-flotante:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.info-flotante .icono {
+    font-size: 1.2rem;
+}
+
+.info-flotante .texto {
+    font-size: 0.9rem;
+}
+
 
 /* ===== BLOQUES ===== */
 .bloque {
@@ -67,10 +107,7 @@
   min-height: 400px;
 }
 
-/* Colores sutiles */
-.bloque1 { background: #f0f0f0; }
-.bloque2 { background: #ffffff; }
-.bloque3 { background: #f0f0f0; }
+.bloque1, .bloque2, .bloque3 { background: rgba(255, 255, 255, 0.85); }
 
 /* ===== BLOQUE 2 - CARDS ===== */
 .card-container {
@@ -80,20 +117,24 @@
 }
 
 /* Cards */
-.card {
-  background: #111;
-  color: white;
+.card, .card1 {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   border-radius: 14px;
   padding: 1rem;
-  text-align: center;
-
+}
+.titulo_lugar{
+  text-align: center
 }
 
+.contenido_lugar{
+  text-align: justify;
+}
 /* Imagen falsa */
-.card .foto {
+.card .foto, 
+.card1 .foto{
   height: 140px;
   background: linear-gradient(135deg, #444, #111);
-
   margin-bottom: 1rem;
 }
 .card .foto img {
@@ -103,9 +144,16 @@
   display: block;
    
 }
+.card1 .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* rellena sin deformar */
+  display: block;
+   
+}
 
 /* Hover */
-.card:hover {
+.card:hover, .card1:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(184, 105, 105, 0.3);
 }
@@ -115,6 +163,53 @@
   font-size: 1rem;
   line-height: 1.6;
 }
+.mapa {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 12px; /* opcional */
+}
+
+.card-container1 {
+    gap: 20px; /* separación entre cards */
+}
+
+.card1 {
+    width: 300px; /* mismo tamaño para todas */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.card1 .foto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* Resumen con ... si se corta - CONTENIDO BREVE  */
+.card1 .resumen {
+    white-space: nowrap;         /* una sola línea */
+    overflow: hidden;            /* corta el texto */
+    text-overflow: ellipsis;     /* muestra "..." */
+    margin: 10px 0;
+}
+
+/* Link */
+.enlaces a, .card1 a {
+    text-decoration: none;
+    margin-top: auto;
+    color: blue;
+}
+.enlaces a:hover, .card1 a:hover {
+    text-decoration: underline;
+    color:rgb(248, 146, 62)
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 992px) {

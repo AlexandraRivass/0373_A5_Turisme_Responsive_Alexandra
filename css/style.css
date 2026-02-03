@@ -50,10 +50,6 @@ text-shadow:
   background-size: cover;
   min-height: 100vh;
   padding-top: 3rem;
-}
-
-/* ===== CONTENEDOR PRINCIPAL ===== */
-.container {
   gap: 2rem;
   padding: 4rem 0;
   max-width: 100% !important;
@@ -63,18 +59,33 @@ text-shadow:
   border: 1px dotted #ccc;
 }
 
+.titulo_columnas {
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.titulo_columnas i {
+    color: #db8400; /* color distintivo */
+
+}
+
+
+
 .info-flotante {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1000;
-
     display: grid;
     grid-auto-flow: column;
     align-items: center;
     gap: 8px;
 
-    background: linear-gradient(135deg, #b9935a, #e6c47a);
+    background: linear-gradient(135deg, #ec930d, #ffae00);
     color: #1a1a1a;
     padding: 10px 16px;
     border-radius: 30px;
@@ -90,13 +101,7 @@ text-shadow:
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
-.info-flotante .icono {
-    font-size: 1.2rem;
-}
 
-.info-flotante .texto {
-    font-size: 0.9rem;
-}
 
 
 /* ===== BLOQUES ===== */
@@ -122,6 +127,7 @@ text-shadow:
   color: rgb(0, 0, 0);
   border-radius: 14px;
   padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .titulo_lugar{
   text-align: center

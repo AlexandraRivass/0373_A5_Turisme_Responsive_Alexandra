@@ -23,7 +23,7 @@
             <div class="carousel-inner">
             <!-- 1 Elemento De Imagen - Donde empieza -->
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="./img/portada/imagen2_carrusel.jpg" alt="First slide">
+                    <img class="d-block w-100" src="./img/portada/imagen2_carrusel.jpg" alt="First slide">  
                 </div>
                 
             <!-- 2 Elemento De Imagen -->
@@ -52,170 +52,306 @@
     <!-- Título en el medio de la página -->
     <div class="titulo-centro">
         <div class="titulo-contenido">
-            <h1>Praga</h1>
+            <h1>Praga</h1><!--Titulo-->
         </div>
     </div>
-    <a href="https://www.prague.eu/es" 
-   target="_blank" 
-   class="info-flotante">
-    <i class="fa-solid fa-circle-info"></i>
-    <span class="texto">Info turística</span>
-</a>
+        <!-- ICONO FLOTANTE -->
+         <!--ENLACE-->
+        <a href="https://www.prague.eu/es" 
+            target="_blank" 
+            class="info-flotante">
+            <i class="fa-solid fa-circle-info"></i>    <!--Icono de Font awesome-->
+            <span class="texto">Info turística</span>    <!--Texto-->
+        </a>
 
 
     <!--PRIMERA COLUMNA-->
-    <div class="container">
+    <section class="container">
+        <!-- MENÚ DE NAVEGACIÓN LATERAL
+            Contiene enlaces a las diferentes secciones de la columna central
+            utilizando anclas para facilitar la navegación interna -->
         <nav class="bloque bloque1">
-                <h1 class="titulo_columnas">
-                    <i class="fa-solid fa-map-signs"></i>
-                    Lugares
-                </h1>
-            <ul class="menu enlaces">
-                <li><a href="#lugar1">Castillo de Praga</a></li>
-                <li><a href="#lugar2">Reloj astronómico</a></li>
-                <li><a href="#lugar3">Puente de Carlos</a></li>
-                <li><a href="#lugar4">Catedral de San Vito</a></li>
-                <li><a href="#lugar5">Plaza de Wenceslao</a></li>
-                <li><a href="#lugar6">Cementerio judío</a></li>
-            </ul>
-        </nav>
+            <div class="posicion"> <!--pOSICION STYCK que eesta en el css-->
+                <!-- Título del menú -->
+                <h1 class="titulo_columnas">Menú</h1>
+                <!-- Lista ordenada-->
+                <ul class="menu enlaces enlaces1">
 
+                    <!-- Enlace a la sección de la galería -->
+                    <li>
+                        <a href="#galeria">Galería</a>
+                    </li>
+
+                    <!-- Enlace a la sección principal de lugares -->
+                    <li>
+                        <a href="#lugares">Descubre Praga</a>
+
+                        <!-- Submenú con los distintos lugares de interés -->
+                        <ul class="submenu">
+                            <li><a href="#lugarCastillo">Castillo de Praga</a></li>
+                            <li><a href="#lugarReloj">Reloj Astronómico</a></li>
+                            <li><a href="#lugarPuente">Puente de Carlos</a></li>
+                            <li><a href="#lugarPlaza">Plaza de Wenceslao</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Enlace a la sección del mapa -->
+                    <li>
+                        <a href="#mapa">Mapa</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
     
         <!-- SEGUNDA COLUMNA-->
-        <div class="bloque bloque2">
+        <section class="bloque bloque2">
             <div class="contenido">
-                <h1 class="titulo_columnas">
-                    <i class="fa-solid fa-city"></i>
-                    Descubre Praga
+                <!-- Id de la galeria del menu-->
+                <h2 id="galeria" class="titulo_columnas"><i class="fa-solid fa-images"></i> Galería de Praga</h2>
+                <!--Icono de Font awesome-->
+                <section  class="galeria">
+                    <div class="galeria_fotos">
+                        <div class="elemento_foto"><img src="./img/galeria/galeria1.jpg" alt="Praga 1"></div>
+                        <div class="elemento_foto"><img src="./img/galeria/galeria2.jpg" alt="Praga 2"></div>
+                        <div class="elemento_foto"><img src="./img/galeria/galeria3.jpg" alt="Praga 3"></div>
+                        <div class="elemento_foto"><img src="./img/galeria/galeria4.jpg" alt="Praga 4"></div>
+                        <div class="elemento_foto"><img src="./img/galeria/galeria5.jpg" alt="Praga 5"></div>
+                        <div class="elemento_foto"><img src="./img/galeria/galeria6.jpeg" alt="Praga 6"></div>
+                    </div>
+                </section>
+                <br>
+                <!-- Id de lugares del menu-->
+                <h1 id="lugares" class="titulo_columnas">
+                    <i class="fa-solid fa-city"></i>    <!--Icono de Font awesome-->
+                    Descubre Praga <!--Título-->
                 </h1>
 
-                <div class="card-container">
+                <section class="card-container">
 
-                    <div id="lugar1" class="card">
+                    <div id="lugarCastillo" class="card"> <!--Id DEL Lugar del menu-->
                         <div class="foto">
                             <img src="./img/portada/castillo_cap1.jpg">
                         </div>
-                        <h5 class="titulo_lugar">Castillo de Praga</h5>
-                        <p class="contenido_lugar">Es el monumento más visitado de Praga. Despuntando sobre la margen izquierda del Moldava, sus prietas hileras de agujas y palacios dominan el centro urbano cual fortaleza de cuento. Intramuros aguarda un fascinante conjunto de edificios históricos, museos y galerías que custodian algunos de los mayores tesoros artísticos y culturales de la República Checa.</p>
+                        <h5 class="titulo_lugar">Castillo de Praga</h5><!--iamgen del sitio-->
+                        <!-- parrafote del contendido -descripcion-->
+                        <p class="contenido_lugar">Es el monumento más visitado de Praga. Despuntando sobre la margen izquierda del Moldava, sus prietas hileras de agujas y palacios dominan el centro urbano cual fortaleza de cuento. Intramuros aguarda museos y galerías que custodian algunos de los mayores tesoros artísticos y culturales</p>
+                        <!--Mapa del sitio-->
                         <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.7429149675254!2d14.39904157690086!3d50.091100013172394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b951e6c24b7c3%3A0x2acf3c88af12259f!2sCastillo%20de%20Praga!5e0!3m2!1ses!2ses!4v1769972067832!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
 
-                    <div id="lugar4" class="card">
-                        <div class="foto">
-                            <img src="./img/portada/catedral_cap2.jpg">
-                        </div>
-                        <h5 class="titulo_lugar" >Catedral de San Vito</h5>
-                        <p class="contenido_lugar">Construida a lo largo de más de 600 años, San Vito es una de las catedrales más opulentas de Europa central y un puntal de la vida religiosa y cultural checa. Entre sus tesoros se cuentan desde joyas de la Corona bohemia del s. xiv y radiantes vitrales art nouveau hasta las tumbas de los santos y soberanos bohemios, desde san Wenceslao hasta Carlos IV.</p>
-                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5529.808031689854!2d14.406833740801984!3d50.08713458716871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b951e38024f5b%3A0x69ad3850f2d989a2!2sCatedral%20de%20Praga!5e0!3m2!1ses!2ses!4v1769972798636!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-                    </div>
-
-                    <div id="lugar2" class="card">
+                    <div id="lugarReloj" class="card"><!--Id DEL Lugar del menu-->
                         <div class="foto">
                             <img src="./img/portada/reloj_asstronomico_cap3.jpg">
                         </div>
-                        <h5 class="titulo_lugar" >Reloj astronómico</h5>
-                        <p class="contenido_lugar">El Ayuntamiento de la Ciudad Vieja, fundado en 1338, es un revoltillo de edificios medievales presididos por una excelsa torre gótica con un espléndido Reloj Astronómico. </p>
+                        <h5 class="titulo_lugar" >Reloj astronómico</h5><!--iamgen del sitio-->
+                        <!-- parrafote del contendido -descripcion-->
+                        <p class="contenido_lugar">El Ayuntamiento de la Ciudad Vieja, fundado en 1338, es un conjunto de edificios medievales presididos por una excelsa torre gótica. Cada hora, los Doce Apóstoles desfilan por las ventanas del reloj, atrayendo a cientos de visitantes que contemplan este espectáculo centenario único en el mundo.</p>
+                        <!--Mapa del sitio-->
                         <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.9605797971094!2d14.41813157690067!3d50.08702491346424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e939c02f49%3A0xf17b44b25aa20696!2sReloj%20Astron%C3%B3mico%20de%20Praga!5e0!3m2!1ses!2ses!4v1769972945537!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
 
                     </div>
 
-                    <div id="lugar5" class="card">
+                    <div id="lugarPlaza" class="card"><!--Id DEL Lugar del menu-->
                         <div class="foto">
-                            <img src="./img/portada/plaza_cap6.jpg">
+                            <img src="./img/portada/plaza_cap6.jpg"><!--iamgen del sitio-->
                         </div>
                         <h5 class="titulo_lugar" >Plaza de Wenceslao</h5>
+                        <!-- parrafote del contendido -descripcion-->
                         <p class="contenido_lugar" >Plasmada en postales que destacan la estatua ecuestre del “buen rey Wenceslao”, la plaza fue punto de encuentro de orgullosos checos y manifestantes de la Revolución de Terciopelo.</p>
+                        <!--Mapa del sitio-->
                         <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.2384867681917!2d14.424218376900367!3d50.081821613836816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ed30d58c83%3A0x31bac9b91ab53afb!2zVsOhY2xhdnNrw6kgbsOhbS4sIDExMCAwMCBQcmFoYSAxLCBDaGVxdWlh!5e0!3m2!1ses!2ses!4v1769973040076!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
 
-                    <div id="lugar3" class="card">
+                    <div id="lugarPuente" class="card"><!--Id DEL Lugar del menu-->
                         <div class="foto">
-                            <img src="./img/portada/puente_cap4.jpg">
+                            <img src="./img/portada/puente_cap4.jpg"> <!--iamgen del sitio-->
                         </div>
                         <h5 class="titulo_lugar">Puente de Carlos</h5>
-                        <p class="contenido_lugar" >Este impresionante puente de piedra, encargado por el emperador Carlos IV en 1357 y flanqueado de estatuas de santos, constituye una forma inolvidable de cruzar desde la Ciudad Vieja a Malá Strana.</p>
+                        <!-- parrafote del contendido -descripcion-->
+                        <p class="contenido_lugar" >Este impresionante puente de piedra, encargado por el emperador Carlos IV en 1357 y flanqueado de estatuas de santos, constituye en cruzar desde la Ciudad Vieja a Malá Strana.</p>
+                        <!--Mapa del sitio-->
                         <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1330.2493346514407!2d14.411343576851989!3d50.086379880964536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e5e58eb59f%3A0x75209738d1d3b126!2sPuente%20Carlos!5e0!3m2!1ses!2ses!4v1769973129447!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
+                </section>
+                <br>
+                <h2 id="mapa" class="titulo_columnas" ><i class="fa-solid fa-map"></i> Mapa de Praga</h2>
 
-                    <div id="lugar6" class="card">
-                        <div class="foto">
-                            <img src="./img/portada/cementerio_cap5.jpg">
+                <section class="card-container">
+                    <div class="contenedor-mapa-general">
+                        <!-- Mapa estático como IMG (como pide el enunciado) -->
+                        <div class="info-mapa">
+                            <iframe class="mapa1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163930.37332669113!2d14.300878827807129!3d50.05984380507729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPraga%2C%20Chequia!5e0!3m2!1ses!2ses!4v1770236031098!5m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                            <p><i class="fa-solid fa-location-dot"></i><!-- Icono--> <strong>Ubicación:</strong> Praga, República Checa</p>
                         </div>
-                        <h5 class="titulo_lugar" >Cementerio judío</h5>
-                        <p class="contenido_lugar">Es el camposanto judío más antiguo que queda en Europa. Se creó a principios del s. xv pero aún conserva un halo de duelo a pesar de cerrarse hace más de dos siglos, es uno de los puntos de interés más visitados y difícilmente se hallará un momento tranquilo para la contemplación.</p>
-                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d806.2950454321538!2d14.417459342183006!3d50.08952524161002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ec00000001%3A0x87ac82039f145fd5!2sAntiguo%20Cementerio%20Jud%C3%ADo!5e0!3m2!1ses!2ses!4v1769973328607!5m2!1ses!2ses"  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                     </div>
-                </div>
+                </section>
+
+
             </div>
-        </div>
+        </section>
 
-        <div class="bloque bloque3">
+        <section class="bloque bloque3">
             <div class="contenido">
-
                 <h1 class="titulo_columnas">
-                    <i class="fa-solid fa-newspaper"></i>
+                    <i class="fa-solid fa-newspaper"></i><!--Icono de Font awesome-->
                     Noticias
                 </h1>
 
                 <div class="card-container1">
                     <!-- Noticia 1 -->
                     <div class="card1">
+                        <!--Contenedor de la noticia-->
                         <div class="foto">
+                            <!--Imagen de la noticia-->
                             <img src="./img/noticias/noticia_primera.jpg" alt="Manifestación en Praga">
                         </div>
                         <h5 class="titulo_lugar" >Manifestación ciudadana en Praga</h5>
+                        <!--Enlace a la noticia-->
                         <a href="https://apnews.com/article/28ffbe24ceb5f5f9e9d6087aa9381d3c" target="_blank">
                             <p class="resumen">Decenas de miles de checos se manifestaron el domingo en la capital y en otros lugares para apoyar al presidente Petr Pavel en su disputa con el ministro de Asuntos Exteriores del país
                             Los manifestantes llenaron la pintoresca Plaza del Núcleo Viejo y algunos otros tuvieron que reunirse en la cercana Plaza Wenceslao, donde vieron los discursos en pantallas gigantes.</p>
                         </a>
                     </div>
 
+                    <!-- Noticia 2 -->
                     <div class="card1">
+                        <!--Contenedor de la noticia-->
                         <div class="foto">
+                            <!--Imagen de la noticia-->
                             <img src="./img/noticias/noticia_dos.jpg" alt="Centro histórico de Praga">
                         </div>
                         <h5 class="titulo_lugar" >Se investiga si el autor del tiroteo de Praga cometió otros crímenes</h5>
+                        <!--Enlace a la noticia-->
                         <a href="https://www.antena3.com/noticias/mundo/investiga-autor-tiroteo-praga-cometio-otros-crimenes_20231222658553c929f3180001333ad6.html" target="_blank">
                             <p class="resumen"> La conmoción es enorme en Praga un día después de que un joven de 24 años provocara la muerte de 14 personas y dejara heridas a otras 25 en la Universidad. Antes de provocar la masacre en el centro educativo, habría matado a su propio padre.</p>
                         </a>
                     </div>
 
+                    <!-- Noticia 3 -->
                     <div class="card1">
+                        <!--Contenedor de la noticia-->
                         <div class="foto">
+                            <!--Imagen de la noticia-->
                             <img src="./img/noticias/noticias_tres.jpg" alt="Metro de Praga">
                         </div>
                         <h5 class="titulo_lugar" >Un avión realizó un aterrizaje de emergencia por el nacimiento de un bebé a bordo</h5>
+                        <!--Enlace a la noticia-->
                         <a href="https://www.clarin.com/viste/avion-realizo-aterrizaje-emergencia-nacimiento-bebe-bordo_0_HcMt6aerAJ.html" target="_blank">
                             <p class="resumen">Un avión de pasajeros que volaba de Birmingham a Bucarest aterrizó en el Aeropuerto Vaclav Havel de Praga debido al nacimiento de un bebé a bordo.</p>
                         </a>
                     </div>
 
+                    <!-- Noticia 4 -->
                     <div class="card1">
+                        <!--Contenedor de la noticia-->
                         <div class="foto">
+                            <!--Imagen de la noticia-->
                             <img src="./img/noticias/noticia_cuarto.jpg" alt="Vivienda en Praga">
                         </div>
                         <h5 class="titulo_lugar" >Una funambulista sorprende a 35 metros de altura y sin red en Francia</h5>
+                        <!--Enlace a la noticia-->
                         <a href="https://www.telecinco.es/noticias/cultura/funambulista-tatiana-mosio-paris-reto-cuerda-floja-red_18_2598780046.html" target="_blank">
                             <p class="resumen">A 35 metros de altura y sin red, así sorprendió la equilibrista francesa Tatiana-Mosio a cientos de personas en París. Un paseo por la cuerda floja en el distrito de Montmartre, en el norte de la capital de Francia. Acompañada por una orquesta de cámara y sin ningún equipo de seguridad. Se preparó para el evento durante un año y practica el funambulismo desde los ocho años.</p>
                         </a>
                     </div>
-
+                    <!-- Noticia 5 -->
                     <div class="card1">
+                        <!--Contenedor de la noticia-->
                         <div class="foto">
+                            <!--Imagen de la noticia-->
                             <img src="./img/noticias/noticia_quinta.jpg" alt="Río Moldava">
                         </div>
                         <h5 class="titulo_lugar" >Al menos cuatro muertos en un incendio en un hotel de una cadena española en Praga</h5>
+                        <!--Enlace a la noticia-->
                         <a href="https://www.antena3.com/noticias/mundo/menos-dos-muertos-incendio-hotel-cadena-espanola-praga_201801215a6468d20cf29cc180729dac.html" target="_blank">
                             <p class="resumen">El incendió en el hotel, un palacio de estilo neorrenacentista con 76 habitaciones, comenzó por razones que aún se desconocen. Unas 40 personas, en su gran mayoría extranjeros, han sido evacuadas.</p>
                         </a>
                     </div>
+
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false" aria-controls="faqCollapseOne">
+                                    ¿Cuál es la mejor época para visitar Praga?<!--Pregunta ACORDEÓN FAQ-->
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    La primavera (abril-junio) y el otoño (septiembre-octubre) son ideales: el clima es agradable y hay menos turistas que en verano.
+                                    <!--Respuesta ACORDEÓN body es el contenido FAQ-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    ¿Cómo moverme por la ciudad?<!--Pregunta ACORDEÓN FAQ-->
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Praga tiene un excelente transporte público: tranvías, metro y autobuses. También se puede recorrer caminando los barrios históricos.
+                                    <!--Respuesta ACORDEÓN body es el contenido FAQ-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    ¿Qué lugares históricos no debo perderme?<!--Pregunta ACORDEÓN FAQ-->
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    El Castillo de Praga, el Puente de Carlos, la Plaza del Centro Histórico y el Reloj Astronómico son imprescindibles.
+                                    <!--Respuesta ACORDEÓN body es el contenido FAQ-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                    ¿Dónde probar la comida típica checa? <!--Pregunta ACORDEÓN FAQ-->
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Restaurantes tradicionales en Malá Strana y Staré Město ofrecen platos típicos como goulash, svíčková y trdelník.
+                                    <!--Respuesta ACORDEÓN body es el contenido FAQ-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                         <!--Ultima sección de FAQ-->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                                    ¿Es Praga segura para los turistas?<!--Pregunta ACORDEÓN FAQ-->
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Sí, Praga es generalmente segura. Sin embargo, se recomienda cuidado con los carteristas en zonas turísticas y mantener precaución en la noche.
+                                    <!--Respuesta ACORDEÓN body es el contenido FAQ-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
+        </section>
+    </section>
+    <!-- SECRIPT DE BOOTSRAP-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
 
 </body>
 </html>

@@ -3,31 +3,36 @@
 /* Configuración básica de la página */
 *{ 
     box-sizing: border-box; 
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans" 300px;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
-
+/*Parte del cuerpo */
 body { 
     margin: 0; 
     background: #f4f4f4; 
-}
-/* ===== PORTADA (solo primera vista) ===== */
+      overflow-x: hidden;
 
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ----PORTADA---- */
 /* Carrusel a pantalla completa */
 .carousel,
 .carousel-inner,
 .carousel-item,
 .carousel-item img {
-height: 100vh;
+height: 100vh; /* cambiar para 100% LAS IMAGENES */
 }
 
-
-/* ===== TEXTO CENTRADO ===== */
+/* texto centrado */
 .titulo-centro {
-position: absolute;
-inset: 0;
+position: absolute; /* posicion absoluta */
+inset: 0; 
 z-index: 2;
 display: flex;
 align-items: center;
@@ -35,14 +40,15 @@ justify-content: center;
 }
 
 .titulo-contenido h1 {
-font-size: 5.5rem;
-color: rgb(255, 255, 255);
-text-shadow:
+font-size: 5.5rem;  /* tamaño */
+color: rgb(255, 255, 255); /* color */
+text-shadow: /* sombra */
 0 2px 8px rgba(255, 160, 70, 0.8),
 0 0 30px rgba(255, 164, 44, 0.6);
 }
 
-/* ===== CONTENIDO NORMAL ===== */
+
+/* ----- CONTENIDO NORMAL ----- */
 .container {
   background-image: url(../img/portada/fondo_pagina.jpg);
   background-repeat: no-repeat;
@@ -53,28 +59,168 @@ text-shadow:
   gap: 2rem;
   padding: 4rem 0;
   max-width: 100% !important;
-  display: flex; /* CAMBIAR ESTO*/
+  display: grid; /* CAMBIAR ESTO*/
+
+  grid-template-columns: 200px 2fr 1fr;
   justify-content: space-between;
   padding: 30px;
   border: 1px dotted #ccc;
 }
 
-.titulo_columnas {
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    font-size: 1.7rem;
-    margin-bottom: 20px;
-    color: #333;
+/* ===== BLOQUES ===== */
+.bloque {
+  background: #f5f5f5;
+  padding: 2rem;
+  border-radius: 16px;
+  min-height: 400px;
 }
 
-.titulo_columnas i {
-    color: #db8400; /* color distintivo */
+.bloque1, .bloque2, .bloque3 { background: rgba(255, 255, 255, 0.85); }
+
+/* Idea de clase - para que no quede feo mi menu :') */
+.posicion {
+  position: sticky;
+  top: 55px; /* 55px de margen desde arriba, para que quede parejo */
+  
 
 }
 
+/* LAS COLUMNAS DDEL MEDIO*/
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; /* Espacio columnas medio*/
+}
+/* Contenedor de la sección galería */
+.galeria {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenedor grid para las imágenes */
+.galeria_fotos {
+    display: grid;
+    gap: 1.2rem; /* Espacio entre imágenes */
+    margin-top: 1rem; /* Margen superior */
+    /* Por defecto: 3 columnas  */
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 9px;
+}
+
+/* Cada elemento de la galería */
+.elemento_foto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Radio de la imagen */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animación */
+    aspect-ratio: 1/1; /* Mantiene cuadradas las imágenes */
+    height: auto;
+}
+
+/* Efecto hover */
+.elemento_foto:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Contenedor de la imagen */
+.elemento_foto  {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Imagen dentro de la galería */
+.elemento_foto img {
+    width: 100%;   /* Ancho de la imagen */
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efecto zoom al pasar el ratón */
+.elemento_foto:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay oscuro para mejor contraste */
+
+.elemento_foto::after {
+    content: '';             /* Crea la capa sobre la foto */
+    position: absolute;      /* La pone justo encimaRW */
+    top: 0;                  
+    left: 0;                 
+    width: 100%;             /* Cubre todo el ancho */
+    height: 100%;            /* Cubre todo el alto */
+    
+    /* Degradado: de transparente a negro */
+    background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.4) 100%);
+    
+    opacity: 0;              /* La mantiene invisible al inicio */
+    transition: opacity 0.3s ease; /* Hace que aparezca suavemente */
+    border-radius: 10px;     /* Redondea las esquinas */
+}
+
+.elemento_foto:hover::after {
+    opacity: 1;
+}
 
 
+/* Cards */
+.card, .card1 {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 14px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card .foto, 
+.card1 .foto{
+  height: 140px;
+  background: linear-gradient(135deg, #444, #111);
+  margin-bottom: 1rem;
+}
+.card .foto img,
+.card1 .foto img {
+  width: 100%; /* Tamaño */
+  height: 100%;
+
+}
+
+/* Hover */
+.card:hover, .card1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(184, 105, 105, 0.3);
+}
+
+.card1 {
+    width: 260px; /* mismo tamaño para todas */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+
+/* Resumen con ... si se corta - CONTENIDO BREVE  */
+.card1 .resumen {
+    white-space: nowrap;         /* una sola línea */
+    overflow: hidden;            /* corta el texto */
+    text-overflow: ellipsis;     /* muestra "..." */
+    margin: 10px 0;
+}
+
+
+/* ------ LO QUUE ESTA FIJADO------ */
 .info-flotante {
     position: fixed;
     top: 20px;
@@ -95,40 +241,33 @@ text-shadow:
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+ /* Un efecto de animacion */
 .info-flotante:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
+.info-mapa {
+      place-items: center; /* Centra horizontal y verticalmente */
 
-
-
-
-/* ===== BLOQUES ===== */
-.bloque {
-  background: #f5f5f5;
-  padding: 2rem;
-  border-radius: 16px;
-  min-height: 400px;
 }
 
-.bloque1, .bloque2, .bloque3 { background: rgba(255, 255, 255, 0.85); }
-
-/* ===== BLOQUE 2 - CARDS ===== */
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+/* ------ titulo columnas ------ */
+.titulo_columnas {
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ffae00;
 }
 
-/* Cards */
-.card, .card1 {
-  background: #ffffff;
-  color: rgb(0, 0, 0);
-  border-radius: 14px;
-  padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.titulo_columnas i {
+    color: #ffac2f; /* color distintivo */
 }
+
+
 .titulo_lugar{
   text-align: center
 }
@@ -136,74 +275,25 @@ text-shadow:
 .contenido_lugar{
   text-align: justify;
 }
-/* Imagen falsa */
-.card .foto, 
-.card1 .foto{
-  height: 140px;
-  background: linear-gradient(135deg, #444, #111);
-  margin-bottom: 1rem;
-}
-.card .foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* rellena sin deformar */
-  display: block;
-   
-}
-.card1 .foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* rellena sin deformar */
-  display: block;
-   
-}
 
-/* Hover */
-.card:hover, .card1:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(184, 105, 105, 0.3);
-}
 
 /* ===== TEXTO ===== */
-.contenido {
-  font-size: 1rem;
-  line-height: 1.6;
-}
 .mapa {
   width: 100%;
-  height: 350px;
+  height: 250px;
   border: 0;
   border-radius: 12px; /* opcional */
 }
+.mapa1 {
+  width: 100vh;
+  height: 250px;
+}
+
 
 .card-container1 {
     gap: 20px; /* separación entre cards */
 }
 
-.card1 {
-    width: 300px; /* mismo tamaño para todas */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.card1 .foto img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-}
-
-/* Resumen con ... si se corta - CONTENIDO BREVE  */
-.card1 .resumen {
-    white-space: nowrap;         /* una sola línea */
-    overflow: hidden;            /* corta el texto */
-    text-overflow: ellipsis;     /* muestra "..." */
-    margin: 10px 0;
-}
 
 /* Link */
 .enlaces a, .card1 a {
@@ -211,25 +301,161 @@ text-shadow:
     margin-top: auto;
     color: blue;
 }
+.enlaces1 a {
+    color: rgb(0, 0, 0) !important;
+}
 .enlaces a:hover, .card1 a:hover {
-    text-decoration: underline;
-    color:rgb(248, 146, 62)
+    text-decoration: underline !important; 
+    color:rgb(248, 146, 62) !important;
+}
+
+/* ===== ACORDEÓN FAQ - ESTILOS NARANJITAS ===== */
+#faqAccordion {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ffd8b2;
+}
+
+.accordion-item {
+    border: none;
+    border-bottom: 1px solid #ffecd9;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-button {
+    background-color: #fff3e6;
+    color: #cc5500;
+    font-weight: 600;
+    padding: 16px 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ffad60;
+    color: #7a3400;
+}
+
+.accordion-button:hover {
+    background-color: #ffe4cc;
+}
+
+.accordion-body {
+    background-color: #fff9f0;
+    padding: 18px;
+    color: #663300;
+    line-height: 1.5;
+    border-top: 1px solid #ffd8b2;
 }
 
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 992px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
 
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
+
+/*(iPhone 12 Pro) */
+@media (max-width: 767px) {
+    
+    /* Titulo mas pqueño de praga */
+    .titulo-contenido h1 {
+        font-size: 3rem !important;
+    }
+
+    .container {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 15px !important;
+    }
+
+    /* ocupen todo el ancho disponible */
+    .bloque {
+        width: 100% !important;
+        min-height: auto !important;
+        margin-bottom: 20px;
+    }
+
+    /* El menú lateral deja de ser sticky y se vuelve una lista normal arriba */
+    .posicion {
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    /* La cuadrícula pasa a 1 columna */
+    .card-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* La Galería: 2 columnas para que no se vean fotos minúsculas */
+    .galeria_fotos {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Ajuste de las noticias: quitamos el ancho fijo de 260px */
+    .card1 {
+        width: 100% !important;
+        margin: 10px 0 !important;
+    }
+
+    /* Los mapas de Google ocuapn mas */
+    .mapa, .mapa1 {
+        width: 100% !important;
+    }
+
+    /* Botón flotante*/
+    .info-flotante {
+        bottom: 20px;
+        top: auto; /* Lo pasamos abajo a la derecha, es más cómodo en móvil */
+        right: 15px;
+        font-size: 14px;
+    }
+    .galeria_fotos {
+        /* Cambiamos de 3 columnas a 1 sola */
+        grid-template-columns: 1fr !important; 
+        
+        /* Aumentamos el espacio entre fotos para que respiren */
+        gap: 2rem; 
+    }
+  .elemento_foto {
+          /* Ancho dde 100% */
+          aspect-ratio: 4/3; 
+      }
+
 }
 
-@media (max-width: 576px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
+/* 2. AJUSTES PARA TABLETS (iPad Mini - 744px a 1133px) */
+@media (min-width: 744px) and (max-width: 1024px) {
+    
+    /* En iPad Mini, 3 columnas quedan muy apretadas. */
+    .container {
+        grid-template-columns:  1fr !important;
+    }
+
+    .bloque3 {
+        grid-column: 1fr !important; /* Noticias ocupa todo el ancho abajo */
+        display: grid;
+    }
+
+    /* Las noticias en iPad se verán mejor en filas de 2 o 3 */
+    .card-container1 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+
+    .card1 {
+        width: 100% !important;
+    }
+
+    .contenedor-mapa-general {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .mapa1 {
+        width: 100% !important;
+        height: 500px !important; 
+        border-radius: 0; /* Sin bordes redondeados para que pegue con los lados */
+        display: block;
+    }
 }
+
